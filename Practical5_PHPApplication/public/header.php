@@ -1,13 +1,7 @@
-<?php date_default_timezone_set('Europe/London');
+<?php
+date_default_timezone_set('Europe/London');
+?>
 
-/* 
- * Application created by Dr Shirley Atkinson for teaching purposes
- * 
- */
-
-
-
-?> 
 <!doctype html>
 <html lang='en'>
 <head>
@@ -21,7 +15,7 @@
 	<script src='http://code.jquery.com/jquery-1.9.1.js'></script>
 	<script src='http://code.jquery.com/ui/1.10.2/jquery-ui.js'></script>
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-	<title>SOFT165 Exercise 01</title>
+	<title>ISAD251 PHP Application</title>
         <link href='../assets/css/isad251.css' rel='stylesheet'  type='text/css'>
 </head>
 <body class='bg-info'>
