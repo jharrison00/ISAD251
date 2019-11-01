@@ -23,6 +23,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.grunt.grunt-cli.package" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.protractor.protractor_package" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -75,7 +81,8 @@
       <workItem from="1572276547967" duration="1328000" />
       <workItem from="1572354025864" duration="1416000" />
       <workItem from="1572364451222" duration="758000" />
-      <workItem from="1572367587338" duration="1304000" />
+      <workItem from="1572367587338" duration="1421000" />
+      <workItem from="1572613573091" duration="3018000" />
     </task>
     <servers />
   </component>

@@ -13,7 +13,9 @@ $footer = include_once 'footer.php';
 <div class="container-fluid col-md-10 offset-md-0">
     <div class="row">
         <div class="card mt-3 px-2 py-2">
-            <input type="radio" name="Agree" value=true>I Agree<br>
-            <input type="radio" name="Disagree" value=false>I Disagree<br>
-            <button type="button" name ="submit" value=false> Submit
+            <form action=agreement.php method="get">
+                <input type="radio" id = "agree" name="choice" value=true>I Agree<br>
+                <input type="radio" id = "disagree" name="choice" value=false>I Disagree<br>
+                <input type="submit" value="Submit">
+            </form>
         </div>
