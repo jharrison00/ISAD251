@@ -8,7 +8,8 @@ $footer = include_once 'footer.php';
     <div class="row">
         <div class="card mt-3 px-2 py-2">
             <h1> Stationery Application</h1>
-            <p>Welcome to this fictional stationery application page created for ISAD 251 example. To continue please accept our terms and conditions</p>
+            <p>Welcome to this fictional stationery application page created for ISAD 251.
+                To continue please accept our terms and conditions</p>
         </div>
 <div class="container-fluid col-md-10 offset-md-0">
     <div class="row">

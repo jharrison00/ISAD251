@@ -4,13 +4,9 @@ $footer = include_once 'footer.php';
 ?>
 
 <?php
-$choice = $_GET["choice"];
-if ($choice == "true") {
-$choice = "Agree";
-}
-elseif ($choice == "false") {
-$choice = "Disagree";
-}
+$cName = $_POST["cName"];
+$postcode = $_POST["postcode"];
+$email = $_POST["email"];
 ?>
 
 <body class ="bg-info">
@@ -23,5 +19,15 @@ $choice = "Disagree";
 <div class="container-fluid col-md-10 offset-md-1">
     <div class="row">
         <div class="card mt-3 px-2 py-2">
-            <?php echo "Welcome. You have selected $choice for the agreement"?>
+            <p>
+                <?php echo "Greetings $cName."?>
+            </p>
+            <p>
+                <?php echo "Your postcode is: $postcode"?>
+            </p>
+            <p>
+                <?php echo "Your E-mail is: $email"?>
+            </p>
         </div>
+
+
