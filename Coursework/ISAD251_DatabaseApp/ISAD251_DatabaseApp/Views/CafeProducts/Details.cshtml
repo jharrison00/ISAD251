@@ -1,0 +1,48 @@
+﻿@model ISAD251_DatabaseApp.Models.CafeProducts
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CafeProducts</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductCalories)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductCalories)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductDetails)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ProductId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
