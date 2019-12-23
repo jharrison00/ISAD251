@@ -12605,11 +12605,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Johnny\\ISAD251\\Coursework\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp.csproj",
+      "projectUniqueName": "C:\\Users\\Johnny\\Documents\\Homework\\Uni\\Isad 251\\Coursework\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp.csproj",
       "projectName": "ISAD251_DatabaseApp",
-      "projectPath": "C:\\Users\\Johnny\\ISAD251\\Coursework\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp.csproj",
+      "projectPath": "C:\\Users\\Johnny\\Documents\\Homework\\Uni\\Isad 251\\Coursework\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp.csproj",
       "packagesPath": "C:\\Users\\Johnny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Johnny\\ISAD251\\Coursework\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp\\obj\\",
+      "outputPath": "C:\\Users\\Johnny\\Documents\\Homework\\Uni\\Isad 251\\Coursework\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
