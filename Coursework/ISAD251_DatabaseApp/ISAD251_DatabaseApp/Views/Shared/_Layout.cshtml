@@ -14,7 +14,7 @@
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
     <!-- Theme CSS - Includes Bootstrap -->
-    <link href="css/creative.css" rel="stylesheet">
+    <link href="~/css/Layout.css" rel="stylesheet">
 </head>
 
 
@@ -37,6 +37,9 @@
                         <a class="nav-link js-scroll-trigger" href="#about">About</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" asp-area="" asp-controller="Home" asp-action="Index">About</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
@@ -45,12 +48,13 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" asp-area="" asp-controller="CafeProducts" asp-action="Index">Menu</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-
 
     <div>
         @RenderBody()
