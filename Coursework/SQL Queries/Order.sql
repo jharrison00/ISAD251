@@ -2,7 +2,7 @@ CREATE TABLE Cafe_Orders(
     OrderID INT NOT NULL,
     CustID INT NOT NULL,
     OrderDate DATE NOT NULL,
-    OrderTotalPrice DECIMAL,
+    OrderTotalPrice DECIMAL(18,2),
 CONSTRAINT pk_Cafe_Orders PRIMARY KEY (OrderID),
 );
 

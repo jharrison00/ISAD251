@@ -23,7 +23,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-5" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                 <div class="logo-image">
                     <img src="~/images/coffee.png" class="img-fluid" />
                 </div>
@@ -34,19 +34,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                        <a class="nav-link js-scroll-trigger" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" asp-area="" asp-controller="Home" asp-action="Index">About</a>
+                        <a class="nav-link js-scroll-trigger" asp-area="" asp-controller="Home" asp-action="About">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                        <a class="nav-link js-scroll-trigger" asp-area="" asp-controller="Home" asp-action="Privacy">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                        <a class="nav-link js-scroll-trigger" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" asp-area="" asp-controller="CafeProducts" asp-action="Index">Menu</a>
@@ -55,6 +52,13 @@
             </div>
         </div>
     </nav>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-3 fixed-bottom">
+        <div class="container fixed-bottom">
+            <div class="small text-center text-muted">Copyright &copy; 2019 - ISAD251 Coursework</div>
+        </div>
+    </footer>
 
     <div>
         @RenderBody()
