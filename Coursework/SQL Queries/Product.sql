@@ -4,6 +4,7 @@ CREATE TABLE Cafe_Products(
     ProductPrice DECIMAL(18,2),
     ProductName VARCHAR(20),
     ProductCalories INT,
-    ProductDetails TEXT,  
+    ProductDetails TEXT,
+    ProductImage TEXT,  
     CONSTRAINT pk_Cafe_Products PRIMARY KEY (ProductID)
 );

@@ -24,7 +24,7 @@ using ISAD251_DatabaseApp.Models;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e34193fda4c81397cf8ff71b38659108cc96dd5e", @"/Views/CafeOrderDetails/Details.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"20a6f977123f00e0a04786e5609cee9c2f4e48fb", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"705cf88ede7804ec67d1b87389d341558ccfa2a9", @"/Views/_ViewImports.cshtml")]
     public class Views_CafeOrderDetails_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ISAD251_DatabaseApp.Models.CafeOrderDetails>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -153,7 +153,7 @@ Write(Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }));
             WriteLiteral(" |\r\n    ");
             EndContext();
             BeginContext(1024, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1db1cea35e0d4d21a014a5583eb3ed8f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc38228179a84d9f8bcb00d25124ac08", async() => {
                 BeginContext(1046, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();

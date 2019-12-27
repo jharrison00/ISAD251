@@ -11,6 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using ISAD251_DatabaseApp.Models;
+using ISAD251_DatabaseApp.Data.Repositories;
+using ISAD251_DatabaseApp.Models.Interfaces;
+using ISAD251_DatabaseApp.Data.Models;
 
 namespace ISAD251_DatabaseApp
 {
@@ -35,7 +38,16 @@ namespace ISAD251_DatabaseApp
 
             services.AddDbContext<ISAD251_JHarrisonContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("ISAD251_DB")));
+
+            services.AddTransient<IProductRepository, ProductRepository>();
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sp => ShoppingCart.GetCart(sp));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMemoryCache();
+            services.AddSession();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,6 +65,7 @@ namespace ISAD251_DatabaseApp
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseCookiePolicy();
 
             app.UseMvc(routes =>

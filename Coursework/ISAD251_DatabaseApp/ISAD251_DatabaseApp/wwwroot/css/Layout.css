@@ -4316,15 +4316,15 @@ input[type="button"].btn-block {
 }
 
 .card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    background-color:transparent;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
 }
 
 .card > hr {
@@ -6215,8 +6215,19 @@ a.close.disabled {
     background-color: #6f4e37;
 }
 
+.bg-img-2 {
+    padding-top: 13rem;
+    background-image: url('../images/slate.jpg');
+    padding-bottom: calc(10rem - 72px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-color: #6f4e37;
+}
+
 .bg-primary {
-    background-color: sandybrown !important;
+    background-color: #fff;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -9402,6 +9413,10 @@ a.text-success:hover, a.text-success:focus {
   color: #17a2b8 !important;
 }
 
+.text-orange {
+    color: #f4623a;
+}
+
 a.text-info:hover, a.text-info:focus {
   color: #0f6674 !important;
 }
@@ -9575,7 +9590,7 @@ html {
 hr.divider {
     max-width: 3.25rem;
     border-width: 0.2rem;
-    border-color: #60330a;
+    border-color: #f4623a;
 }
 
 hr.light {
@@ -9667,13 +9682,13 @@ hr.light {
 }
 
 header.masthead {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 72px);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../images/CoffeeBackground.JPG");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    background: url("../images/Slate.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
 }
 
 header.masthead h1 {
