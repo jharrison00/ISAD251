@@ -35,7 +35,8 @@ namespace ISAD251_DatabaseApp.Controllers
 
         public RedirectToActionResult AddToShoppingCart(int productID)
         {
-            var selectedProduct = _productRepository.Products.FirstOrDefault(p => p.ProductId == productID);
+            CafeProducts selectedProduct = new CafeProducts();
+            selectedProduct = _productRepository.GetProductById(productID);
             if (selectedProduct != null)
             {
                 _shoppingCart.AddToCart(selectedProduct, 1);

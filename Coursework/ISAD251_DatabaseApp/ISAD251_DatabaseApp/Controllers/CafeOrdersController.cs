@@ -6,16 +6,25 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ISAD251_DatabaseApp.Models;
+using ISAD251_DatabaseApp.Data.Models;
 
 namespace ISAD251_DatabaseApp.Controllers
 {
     public class CafeOrdersController : Controller
     {
         private readonly ISAD251_JHarrisonContext _context;
+        private readonly ShoppingCart _shoppingCart;
 
-        public CafeOrdersController(ISAD251_JHarrisonContext context)
+        public CafeOrdersController(ISAD251_JHarrisonContext context, ShoppingCart shoppingCart)
         {
             _context = context;
+            _shoppingCart = shoppingCart;
+        }
+
+
+        public IActionResult Checkout()
+        {
+            return View();
         }
 
         // GET: CafeOrders

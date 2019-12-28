@@ -19,7 +19,7 @@ namespace ISAD251_DatabaseApp.Controllers
         }
 
         // GET: CafeProducts
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Menu()
         {
             return View(await _context.CafeProducts.ToListAsync());
         }
@@ -59,7 +59,7 @@ namespace ISAD251_DatabaseApp.Controllers
             {
                 _context.Add(cafeProducts);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Menu));
             }
             return View(cafeProducts);
         }
@@ -110,7 +110,7 @@ namespace ISAD251_DatabaseApp.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Menu));
             }
             return View(cafeProducts);
         }
@@ -141,7 +141,7 @@ namespace ISAD251_DatabaseApp.Controllers
             var cafeProducts = await _context.CafeProducts.FindAsync(id);
             _context.CafeProducts.Remove(cafeProducts);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Menu));
         }
 
         private bool CafeProductsExists(int id)

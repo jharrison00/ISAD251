@@ -133,7 +133,7 @@ using ISAD251_DatabaseApp.Data.Models;
             WriteLiteral("\r\n                    </td>\r\n                    <td class=\"text-center\">");
             EndContext();
             BeginContext(1051, 172, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c9fbc19cc1a463f9c6b51b9648a7551", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8175b56ad0824fdfbe942a3f31f7e3bd", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper>();
@@ -186,7 +186,7 @@ using ISAD251_DatabaseApp.Data.Models;
             WriteLiteral("\r\n                </td>\r\n            </tr>\r\n        </tfoot>\r\n    </table>\r\n\r\n    <div class=\"text-right\">\r\n        <div class=\"btn-group \">\r\n            ");
             EndContext();
             BeginContext(1638, 85, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5c3310cf69864c42bd1376e438880edf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "907fccf2bf664ebc80a3611c43f51edc", async() => {
                 BeginContext(1710, 9, true);
                 WriteLiteral("Check out");
                 EndContext();
@@ -217,7 +217,7 @@ using ISAD251_DatabaseApp.Data.Models;
                     <li>");
             EndContext();
             BeginContext(2010, 88, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "366fc08874da43cb94661ff667a9dfeb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8784bee43f40435c99f346a28adc3308", async() => {
                 BeginContext(2085, 9, true);
                 WriteLiteral("Alcoholic");
                 EndContext();
@@ -247,7 +247,7 @@ using ISAD251_DatabaseApp.Data.Models;
             WriteLiteral("</li>\r\n                    <li>");
             EndContext();
             BeginContext(2129, 96, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1bd896b468b143d3943dcaf57342d05c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f6c7e311731045608b45e0251bad4d32", async() => {
                 BeginContext(2208, 13, true);
                 WriteLiteral("Non Alcoholic");
                 EndContext();
