@@ -14,7 +14,7 @@ namespace ISAD251_DatabaseApp.Models
         public int CustId { get; set; }
         public DateTime OrderDate { get; set; }
         public decimal? OrderTotalPrice { get; set; }
-
+     
         public CafeCustomers Cust { get; set; }
         public ICollection<CafeOrderDetails> CafeOrderDetails { get; set; }
     }

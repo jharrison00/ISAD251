@@ -119,10 +119,18 @@ namespace ISAD251_DatabaseApp.Data.Models
         //Get cart total price
         public decimal? GetShoppingCartTotal()
         {
-            //Gets all products and multiplies by each quantity
-            var total = _DbContext.ShoppingCartItems.Where(
-                c => c.ShoppingCartID == ShoppingCartID)
-                .Select(c => c.Products.ProductPrice * c.Amount).Sum();
+            decimal? total;
+            if (_DbContext.ShoppingCartItems.Count() != 0)
+            {
+                //Gets all products and multiplies by each quantity
+                total = _DbContext.ShoppingCartItems.Where(
+                    c => c.ShoppingCartID == ShoppingCartID)
+                    .Select(c => c.Products.ProductPrice * c.Amount).Sum();
+            }
+            else
+            {
+                total = 0;
+            }
             //Return decimal value
             return total;
         }
