@@ -1,0 +1,18 @@
+﻿<li class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" data-toggle="dropdown" asp-area="" asp-controller="CafeProducts" asp-action="Menu">Menu
+        <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu bg-secondary nav-item">
+        @foreach (var category in Model)
+        {
+            <li>
+                <a class ="nav-link" asp-area="" asp-controller="CafeProducts" asp-action="Menu"
+                   asp-route-category="@category">@category</a>
+            </li>
+        }
+        <li>
+            <a class="nav-link" asp-controller="CafeProducts" asp-action="Menu" asp-route-category="">All Products</a>
+        </li>
+    </ul>
+</li>
+

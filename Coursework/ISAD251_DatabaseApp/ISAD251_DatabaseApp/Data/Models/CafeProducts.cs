@@ -18,6 +18,7 @@ namespace ISAD251_DatabaseApp.Models
         public string ProductDetails { get; set; }
         public string ProductImage { get; set; }
 
+
         public ICollection<CafeOrderDetails> CafeOrderDetails { get; set; }
     }
 }

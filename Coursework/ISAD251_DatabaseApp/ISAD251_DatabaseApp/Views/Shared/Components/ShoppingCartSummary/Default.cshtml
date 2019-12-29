@@ -4,7 +4,7 @@
 @if (Model.ShoppingCart.ShoppingCartItems.Count > 0)
 {
     <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" asp-controller="ShoppingCart">
+        <a class="nav-link js-scroll-trigger" asp-area="" asp-controller="ShoppingCart" asp-action="Index">
             <i class="fas fa-1x fa-shopping-basket text-primary mb-4"></i>
             @Model.ShoppingCart.ShoppingCartItems.Count
         </a>

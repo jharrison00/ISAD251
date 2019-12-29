@@ -599,6 +599,10 @@ pre code {
   margin-left: -15px;
 }
 
+.ex1 {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -2256,31 +2260,31 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #6f4e37;
-    border-color: #6f4e37;
+    background-color: #f4623a;
+    border-color: #f4623a;
 }
 
     .btn-primary:hover {
         color: #fff;
-        background-color: #d4b39a;
-        border-color: #6f4e37;
+        background-color: #f24516;
+        border-color: #ee3e0d;
     }
 
     .btn-primary:focus, .btn-primary.focus {
-        box-shadow: 0 0 0 0.2rem #6f4e37;
+        box-shadow: 0 0 0 0.2rem rgba(246, 122, 88, 0.5);
     }
 
     .btn-primary.disabled, .btn-primary:disabled {
         color: #fff;
-        background-color: #6f4e37;
-        border-color: #6f4e37;
+        background-color: #f4623a;
+        border-color: #f4623a;
     }
 
     .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
     .show > .btn-primary.dropdown-toggle {
         color: #fff;
-        background-color: #6f4e37;
-        border-color: #6f4e37;
+        background-color: #ee3e0d;
+        border-color: #e23a0d;
     }
 
         .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -2900,10 +2904,10 @@ input[type="button"].btn-block {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #212529;
+  color: transparent;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: transparent;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
@@ -3056,7 +3060,7 @@ input[type="button"].btn-block {
 
 .dropdown-divider {
   height: 0;
-  margin: 0.5rem 0;
+  margin: 0.1rem 0;
   overflow: hidden;
   border-top: 1px solid #e9ecef;
 }
@@ -3067,7 +3071,7 @@ input[type="button"].btn-block {
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: #212529;
+  color: transparent;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -3108,7 +3112,7 @@ input[type="button"].btn-block {
 .dropdown-item-text {
   display: block;
   padding: 0.25rem 1.5rem;
-  color: #212529;
+  color: transparent;
 }
 
 .btn-group,
@@ -6237,7 +6241,7 @@ button.bg-primary:focus {
 }
 
 .bg-secondary {
-  background-color: #6c757d !important;
+    background-color: transparent !important;
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
@@ -9770,6 +9774,13 @@ header.masthead h1 {
     position: relative;
     margin-top: 90px;
     height: 1px;
+}
+
+.divider2 {
+    border-top: solid 1px #1a1a1a;
+    clear: both;
+    height: 1px;
+    width: 100%;
 }
 
 .div-transparent:before {

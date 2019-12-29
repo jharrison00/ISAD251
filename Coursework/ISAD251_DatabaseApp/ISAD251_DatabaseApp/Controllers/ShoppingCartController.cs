@@ -40,13 +40,13 @@ namespace ISAD251_DatabaseApp.Controllers
             if (selectedProduct != null)
             {
                 _shoppingCart.AddToCart(selectedProduct, 1);
-            }
-            return RedirectToAction("Index");   
+            }        
+            return RedirectToAction("Menu", "CafeProducts");
         }
 
         public RedirectToActionResult RemoveFromShoppingCart(int productID)
         {
-            var selectedProduct = _productRepository.Products.FirstOrDefault(p => p.ProductId == productID);
+            var selectedProduct = _productRepository.GetProductById(productID);
             if (selectedProduct != null)
             {
                 _shoppingCart.RemoveFromCart(selectedProduct);

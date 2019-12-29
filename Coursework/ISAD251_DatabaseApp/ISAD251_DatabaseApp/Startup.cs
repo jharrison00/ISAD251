@@ -71,6 +71,10 @@ namespace ISAD251_DatabaseApp
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                    name: "MenuFilter", 
+                    template: "CafeProducts/{category?}",
+                    defaults: new { Controller ="CafeProducts", Action="Menu"});
+                routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });

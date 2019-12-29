@@ -1,8 +1,45 @@
-﻿@model IEnumerable<ISAD251_DatabaseApp.Models.CafeProducts>
+﻿
+@model IEnumerable<ISAD251_DatabaseApp.Models.CafeProducts>
 
 @{
     ViewData["Title"] = "Index";
 }
+
+<div class="container col-lg-12 bg-img-2">
+    <h1 class="text-uppercase text-center text-orange">Menu</h1>
+    <div class="row">
+        @{
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title text-white text-center">
+                                <a asp-action="Details" asp-route-id="@item.ProductId">@item.ProductName</a>
+                            </h2>
+                            <h3 class="h4 text-white text-center mb-2">£@item.ProductPrice</h3>
+                            <p class="card-text text-white text-center mb-0">Calories: @item.ProductCalories</p>
+                            <p class="card-text text-white text-center mb-0">@item.ProductDetails</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="addToCart text-center">
+                                <p class="button">
+                                    <a class="btn btn-success" id="cartButton"
+                                        asp-controller="ShoppingCart"
+                                        asp-action="AddToShoppingCart"
+                                        asp-route-ProductId="@item.ProductId">
+                                        Add to cart
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+
 <header class="bg-img-2">
     <div class="container">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -30,41 +67,6 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-        </div>
-    </div>
-
-    <div class="container col-lg-12 bg-img-2">
-        <h1 class="text-uppercase text-center text-orange">Menu</h1>
-        <div class="row">
-            @{
-                @foreach (var item in Model)
-                {
-                    <div class="col-lg-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h2 class="card-title text-white text-center">
-                                    <a asp-action="Details" asp-route-id="@item.ProductId">@item.ProductName</a>
-                                </h2>
-                                <h3 class="h4 text-white text-center mb-2">£@item.ProductPrice</h3>
-                                <p class="card-text text-white text-center mb-0">Calories: @item.ProductCalories</p>
-                                <p class="card-text text-white text-center mb-0">@item.ProductDetails</p>
-                            </div>
-                            <div class="card-footer">
-                                <div class="addToCart text-center">
-                                    <p class="button">
-                                        <a class="btn btn-success" id="cartButton"
-                                           asp-controller="ShoppingCart"
-                                           asp-action="AddToShoppingCart"
-                                           asp-route-ProductId="@item.ProductId">
-                                            Add to cart
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                }
-            }
         </div>
     </div>
 </header>

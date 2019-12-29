@@ -1,6 +1,6 @@
 CREATE TABLE Cafe_Products(
     ProductID INT NOT NULL,
-    ProductType VARCHAR(5) NULL CHECK(ProductType IN ('Drink','Food')),
+    ProductType VARCHAR(6) NULL CHECK(ProductType IN ('Drinks','Food')),
     ProductPrice DECIMAL(18,2),
     ProductName VARCHAR(20),
     ProductCalories INT,

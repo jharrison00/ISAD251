@@ -17,10 +17,10 @@
     <link href="~/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS - Includes Bootstrap -->
-    <link href="~/css/Layout.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/Layout.css">
 </head>
 
-<body>
+<body class="bg-light">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-5" id="mainNav">
         <div class="container">
@@ -46,9 +46,7 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" asp-area="" asp-controller="CafeProducts" asp-action="Menu">Menu</a>
-                    </li>
+                    @await  Component.InvokeAsync("CategoryMenu")
                     @await Component.InvokeAsync("ShoppingCartSummary")
 
 </ul>

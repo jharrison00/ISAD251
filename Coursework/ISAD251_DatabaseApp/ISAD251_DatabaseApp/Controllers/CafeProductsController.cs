@@ -6,22 +6,45 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ISAD251_DatabaseApp.Models;
+using ISAD251_DatabaseApp.Models.Interfaces;
+using ISAD251_DatabaseApp.Data.Models;
 
 namespace ISAD251_DatabaseApp.Controllers
 {
     public class CafeProductsController : Controller
     {
         private readonly ISAD251_JHarrisonContext _context;
+        private readonly IProductRepository _productRepository;
 
-        public CafeProductsController(ISAD251_JHarrisonContext context)
+        public CafeProductsController(ISAD251_JHarrisonContext context,IProductRepository productRepository)
         {
             _context = context;
+            _productRepository = productRepository;
         }
 
         // GET: CafeProducts
-        public async Task<IActionResult> Menu()
+        public async Task<IActionResult> Menu(string category)
         {
-            return View(await _context.CafeProducts.ToListAsync());
+            string _category = category;
+            var products = await _context.CafeProducts.ToListAsync();
+
+            if (string.IsNullOrEmpty(category))
+            {
+                products = await _context.CafeProducts.ToListAsync();
+            }
+            else
+            {
+                if (String.Equals("Drinks", _category))
+                {
+                    products = await _context.CafeProducts.Where(p => p.ProductType.Equals("Drinks")).ToListAsync();
+                }
+                if (String.Equals("Food", _category))
+                {
+                    products = await _context.CafeProducts.Where(p => p.ProductType.Equals("Food")).ToListAsync();
+                }
+            }
+
+            return View(products);
         }
 
         // GET: CafeProducts/Details/5
