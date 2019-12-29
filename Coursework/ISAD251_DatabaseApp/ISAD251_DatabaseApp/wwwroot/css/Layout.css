@@ -2429,9 +2429,10 @@ fieldset:disabled a.btn {
 }
 
 .btn-danger {
-  color: #fff;
-  background-color: #dc3545;
-  border-color: #dc3545;
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    right: 0;
 }
 
 .btn-danger:hover {
@@ -2909,7 +2910,7 @@ input[type="button"].btn-block {
   list-style: none;
   background-color: transparent;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: transparent;
   border-radius: 0.25rem;
 }
 

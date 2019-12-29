@@ -51,7 +51,14 @@ namespace ISAD251_DatabaseApp.Controllers
             {
                 _shoppingCart.RemoveFromCart(selectedProduct);
             }
+
             return RedirectToAction("Index");
+        }
+
+        public RedirectToActionResult EmptyCart()
+        {
+            _shoppingCart.ClearCart();
+            return RedirectToAction("Menu", "CafeProducts");
         }
     }
 }
