@@ -620,6 +620,17 @@ pre code {
     margin-top: 7rem;
     margin-bottom: 7rem;
 }
+
+.ex2 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.ex3 {
+    margin-bottom: 9rem;
+}
+
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -4365,8 +4376,6 @@ input[type="button"].btn-block {
     word-wrap: break-word;
     background-clip: border-box;
     background-color:transparent;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
 }
 
 .card > hr {
@@ -4414,21 +4423,17 @@ input[type="button"].btn-block {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .card-header:first-child {
-  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
 }
 
 .card-header + .list-group .list-group-item:first-child {
-  border-top: 0;
 }
 
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .card-footer:last-child {
@@ -4439,7 +4444,6 @@ input[type="button"].btn-block {
   margin-right: -0.625rem;
   margin-bottom: -0.75rem;
   margin-left: -0.625rem;
-  border-bottom: 0;
 }
 
 .card-header-pills {

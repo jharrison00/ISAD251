@@ -46,6 +46,18 @@ namespace ISAD251_DatabaseApp.Controllers
             return RedirectToAction("Menu", "CafeProducts");
         }
 
+        //Adds to quantity (Specfiic for quantity bar)
+        public RedirectToActionResult AddToQuantity(int productID)
+        {
+            CafeProducts selectedProduct = new CafeProducts();
+            selectedProduct = _productRepository.GetProductById(productID);
+            if (selectedProduct != null)
+            {
+                _shoppingCart.AddToCart(selectedProduct, 1);
+            }
+            return RedirectToAction("Index");
+        }
+
         //Removes specified item from cart
         public RedirectToActionResult RemoveFromShoppingCart(int productID)
         {

@@ -40,7 +40,7 @@ namespace ISAD251_DatabaseApp.Controllers
             {
                 customer = _customerRepository.CreateCustomer(customer);
             }
-            return RedirectToAction("CheckoutOrder", "CafeOrders", new { @customerId = customer.CustId });
+            return RedirectToAction("CheckoutConfirmation", "CafeOrders", new { @customerId = customer.CustId });
         }
 
         // GET: CafeCustomers

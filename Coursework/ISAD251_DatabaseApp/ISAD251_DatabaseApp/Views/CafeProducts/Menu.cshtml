@@ -6,12 +6,12 @@
 }
 
 <div class="container col-lg-12 bg-img-2">
-    <h1 class="text-uppercase text-center text-orange">Menu</h1>
+    <h1 class="text-uppercase text-white text-center font-weight-bold">The Menu</h1>
     <div class="row">
         @{
             @foreach (var item in Model)
             {
-                <div class="col-lg-4">
+                <div class="col-lg-4">w
                     <div class="card h-100">
                         <div class="card-body">
                             <h2 class="card-title text-white text-center">
@@ -25,9 +25,9 @@
                             <div class="addToCart text-center">
                                 <p class="button">
                                     <a class="btn btn-success" id="cartButton"
-                                        asp-controller="ShoppingCart"
-                                        asp-action="AddToShoppingCart"
-                                        asp-route-ProductId="@item.ProductId">
+                                       asp-controller="ShoppingCart"
+                                       asp-action="AddToShoppingCart"
+                                       asp-route-ProductId="@item.ProductId">
                                         Add to cart
                                     </a>
                                 </p>
@@ -38,9 +38,7 @@
             }
         }
     </div>
-</div>
 
-<header class="bg-img-2">
     <div class="container">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -69,4 +67,6 @@
             </a>
         </div>
     </div>
-</header>
+</div>
+
+

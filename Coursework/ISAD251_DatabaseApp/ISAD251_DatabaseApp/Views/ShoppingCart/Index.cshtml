@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row h-100 align-items-center justify-content-center text-center">
             <div class="col-lg-10 align-self-end">
-                <h1 class="text-uppercase text-orange font-weight-bold">Your order</h1>
+                <h1 class="text-uppercase text-center text-white font-weight-bold">Your Order</h1>
             </div>
         </div>
     </div>
@@ -29,12 +29,16 @@
                         <td class="text-center">£@line.Products.ProductPrice</td>
                         <td class="text-center">
                             <div class="quantity">
-                                <button class="plus-btn" type="button" name="button">
-                                    +
+                                <button class="plus-btn">
+                                    <a asp-controller="ShoppingCart"
+                                       asp-action="AddToQuantity"
+                                       asp-route-ProductId="@line.Products.ProductId">+</a>
                                 </button>
                                 @line.Amount
-                                <button class="minus-btn" type="button" name="button">
-                                    -
+                                <button class="plus-btn">
+                                    <a asp-controller="ShoppingCart"
+                                       asp-action="RemoveFromShoppingCart"
+                                       asp-route-ProductId="@line.Products.ProductId">-</a>
                                 </button>
                             </div>
                         </td>
