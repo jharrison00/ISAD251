@@ -70,12 +70,12 @@ using ISAD251_DatabaseApp.Data.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             BeginContext(0, 224, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dc13dbf5c07549aba60141b8f1a54023", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7935c0212b6748d392d6db9198d500f2", async() => {
                 BeginContext(35, 6, true);
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(41, 71, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09c4f363b56e4289b52a074a5fe0582e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d87b1efc4d504c78afb52c277f1111bf", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -93,7 +93,7 @@ using ISAD251_DatabaseApp.Data.Models;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(118, 90, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3217bc1ea39f47a7a4b1bcf2ea492727", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1665001ff83b4cf58fd66e485f549ee8", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -128,12 +128,12 @@ using ISAD251_DatabaseApp.Data.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(226, 944, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "17233900df5e4a7e9a6423b39cf94c9c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3eb461aecf4d44d380fe9b1311071760", async() => {
                 BeginContext(261, 6, true);
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(267, 399, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "811d78d1a42a48ce98c7aae4d08c8221", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3601306b5b07417ebe82661d0c57c3ad", async() => {
                     BeginContext(651, 6, true);
                     WriteLiteral("\r\n    ");
                     EndContext();
@@ -161,7 +161,7 @@ using ISAD251_DatabaseApp.Data.Models;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(672, 482, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c11123b4c7264b7dad6b4a67cea38b40", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "70c7843427964cab900d59ecfd4c76dd", async() => {
                     BeginContext(1139, 6, true);
                     WriteLiteral("\r\n    ");
                     EndContext();

@@ -8,6 +8,6 @@ namespace ISAD251_DatabaseApp.Data.Interfaces
 {
     public interface IOrderRepository
     {
-        void CreateOrder(CafeOrders order);
+        void CreateOrder(CafeOrders order, int id);
     }
 }

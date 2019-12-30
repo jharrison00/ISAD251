@@ -6,16 +6,41 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ISAD251_DatabaseApp.Models;
+using ISAD251_DatabaseApp.Data.Interfaces;
+using ISAD251_DatabaseApp.Data.Models;
 
 namespace ISAD251_DatabaseApp.Controllers
 {
     public class CafeCustomersController : Controller
     {
         private readonly ISAD251_JHarrisonContext _context;
+        private readonly ICustomerRepository _customerRepository;
 
-        public CafeCustomersController(ISAD251_JHarrisonContext context)
+        public CafeCustomersController(ISAD251_JHarrisonContext context, ICustomerRepository customerRepository)
         {
             _context = context;
+            _customerRepository = customerRepository;
+        }
+
+        public ActionResult Checkout()
+        {
+            return View();
+        }
+
+        //After form is submitted
+        [HttpPost]
+        public ActionResult Checkout(CafeCustomers customer)
+        {
+            //Validation of input fields
+            if (customer.CustFirstName == null || customer.CustSurName == null)
+            {
+                ModelState.AddModelError("", "Please fill out all of the fields.");
+            }
+            if (ModelState.IsValid)
+            {
+                customer = _customerRepository.CreateCustomer(customer);
+            }
+            return RedirectToAction("CheckoutOrder", "CafeOrders", new { @customerId = customer.CustId });
         }
 
         // GET: CafeCustomers

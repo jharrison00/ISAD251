@@ -1,4 +1,4 @@
-﻿@model ISAD251_DatabaseApp.Data.Models.ShoppingCartViewModel
+﻿@model ShoppingCartViewModel
 
 <header class="bg-img-2">
     <div class="container">
@@ -10,7 +10,7 @@
     </div>
 </header>
 <div class="container h-100 ex1">
-    <div class="row checkoutForm">
+    <div class="row">
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
@@ -27,7 +27,17 @@
                     <tr>
                         <td class="text-center">@line.Products.ProductName</td>
                         <td class="text-center">£@line.Products.ProductPrice</td>
-                        <td class="text-center">@line.Amount</td>
+                        <td class="text-center">
+                            <div class="quantity">
+                                <button class="plus-btn" type="button" name="button">
+                                    +
+                                </button>
+                                @line.Amount
+                                <button class="minus-btn" type="button" name="button">
+                                    -
+                                </button>
+                            </div>
+                        </td>
                         <td class="text-center">£@((line.Amount * line.Products.ProductPrice))</td>
                         <td class="text-center">
                             <a class="fas fa-2x fa-times" asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-productId="@line.Products.ProductId"></a>
@@ -48,7 +58,7 @@
         <div class="text-right">
             <div class="btn-group ">
                 <div>
-                    <a class="btn btn-success" asp-controller="CafeOrders" asp-action="Checkout">Check out</a>
+                    <a class="btn btn-success" asp-controller="CafeCustomers" asp-action="Checkout">Check out</a>
                 </div>
                 <a class="btn-group">
                     <a class="btn btn-default nav-link dropdown-toggle" data-toggle="dropdown">

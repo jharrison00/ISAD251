@@ -22,7 +22,7 @@ namespace ISAD251_DatabaseApp.Controllers
             _productRepository = productRepository;
         }
 
-        // GET: CafeProducts
+        // Gets products: dependent on food or drinks or all
         public async Task<IActionResult> Menu(string category)
         {
             string _category = category;

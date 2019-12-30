@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ISAD251_DatabaseApp.Models;
 using ISAD251_DatabaseApp.Data.Models;
+using ISAD251_DatabaseApp.Data.Interfaces;
 
 namespace ISAD251_DatabaseApp.Controllers
 {
@@ -14,18 +15,31 @@ namespace ISAD251_DatabaseApp.Controllers
     {
         private readonly ISAD251_JHarrisonContext _context;
         private readonly ShoppingCart _shoppingCart;
+        private readonly IOrderRepository _orderRepository;
 
-        public CafeOrdersController(ISAD251_JHarrisonContext context, ShoppingCart shoppingCart)
+        public CafeOrdersController(ISAD251_JHarrisonContext context, ShoppingCart shoppingCart,IOrderRepository orderRepository)
         {
             _context = context;
             _shoppingCart = shoppingCart;
+            _orderRepository = orderRepository;
         }
 
-
-        public IActionResult Checkout()
+        public ActionResult CheckoutConfirmation(CafeOrders order,int customerId)
         {
+            //Gets shopping cart items
+            var items = _shoppingCart.GetShoppingCartItems();
+            _shoppingCart.ShoppingCartItems = items;
+
+            //Validation of data
+            if (_shoppingCart.ShoppingCartItems.Count == 0)
+            {
+                ModelState.AddModelError("", "Your cart is empty - please add items to confirm order.");
+            }
+            _orderRepository.CreateOrder(order, customerId);
+            _shoppingCart.ClearCart();
             return View();
         }
+
 
         // GET: CafeOrders
         public async Task<IActionResult> Index()

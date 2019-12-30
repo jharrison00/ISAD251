@@ -488,6 +488,23 @@ mark,
   height: auto;
 }
 
+.image img {
+    width: 50%;
+}
+
+.image,
+.quantity,
+.description {
+    width: 100%;
+    text-align: center;
+    margin: 6px 0;
+}
+
+.buttons {
+    margin-right: 20px;
+}
+
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
@@ -2256,6 +2273,26 @@ textarea.form-control {
 a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none;
+}
+
+.minus-btn img {
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+
+.plus-btn img {
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-top: 2px;
 }
 
 .btn-primary {

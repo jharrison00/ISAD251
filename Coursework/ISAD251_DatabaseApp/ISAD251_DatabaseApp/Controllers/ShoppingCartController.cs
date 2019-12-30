@@ -20,6 +20,7 @@ namespace ISAD251_DatabaseApp.Controllers
             _productRepository = productRepository;
         }
 
+        //Returns data to view model
         public ViewResult Index()
         {
             var items = _shoppingCart.GetShoppingCartItems();
@@ -33,6 +34,7 @@ namespace ISAD251_DatabaseApp.Controllers
             return View(cartViewModel);
         }
 
+        //Adds specified item to cart
         public RedirectToActionResult AddToShoppingCart(int productID)
         {
             CafeProducts selectedProduct = new CafeProducts();
@@ -44,6 +46,7 @@ namespace ISAD251_DatabaseApp.Controllers
             return RedirectToAction("Menu", "CafeProducts");
         }
 
+        //Removes specified item from cart
         public RedirectToActionResult RemoveFromShoppingCart(int productID)
         {
             var selectedProduct = _productRepository.GetProductById(productID);
@@ -51,10 +54,16 @@ namespace ISAD251_DatabaseApp.Controllers
             {
                 _shoppingCart.RemoveFromCart(selectedProduct);
             }
-
+            //If shopping cart is empty return to menu
+            if (_shoppingCart.GetShoppingCartItems().Count() == 0)
+            {
+                _shoppingCart.ClearCart();
+                return RedirectToAction("Menu", "CafeProducts");
+            }     
             return RedirectToAction("Index");
         }
 
+        //Clears all item in cart
         public RedirectToActionResult EmptyCart()
         {
             _shoppingCart.ClearCart();

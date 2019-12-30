@@ -14,6 +14,7 @@ using ISAD251_DatabaseApp.Models;
 using ISAD251_DatabaseApp.Data.Repositories;
 using ISAD251_DatabaseApp.Models.Interfaces;
 using ISAD251_DatabaseApp.Data.Models;
+using ISAD251_DatabaseApp.Data.Interfaces;
 
 namespace ISAD251_DatabaseApp
 {
@@ -43,6 +44,8 @@ namespace ISAD251_DatabaseApp
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sp => ShoppingCart.GetCart(sp));
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddMemoryCache();
@@ -70,6 +73,10 @@ namespace ISAD251_DatabaseApp
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute(
+                    name: "CustomerID",
+                    template: "CafeOrders/{id?}",
+                    defaults: new { Controller = "CafeOrders", Action = "CheckoutOrder" });
                 routes.MapRoute(
                     name: "MenuFilter", 
                     template: "CafeProducts/{category?}",
