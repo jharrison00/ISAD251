@@ -13,11 +13,13 @@ namespace ISAD251_DatabaseApp.Models
         
         public int CustId { get; set; }
         
+
+        [StringLength(20)]
         [Required(ErrorMessage = "Please enter your first name")]
-        [StringLength(20)]
         public string CustFirstName { get; set; }
-        [Required(ErrorMessage = "Please enter your last name")]
+
         [StringLength(20)]
+        [Required(ErrorMessage = "Please enter your last name")]
         public string CustSurName { get; set; }
 
         public ICollection<CafeOrders> CafeOrders { get; set; }

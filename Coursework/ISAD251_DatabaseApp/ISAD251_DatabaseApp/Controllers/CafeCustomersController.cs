@@ -31,16 +31,19 @@ namespace ISAD251_DatabaseApp.Controllers
         [HttpPost]
         public ActionResult Checkout(CafeCustomers customer)
         {
+
             //Validation of input fields
-            if (customer.CustFirstName == null || customer.CustSurName == null)
-            {
-                ModelState.AddModelError("", "Please fill out all of the fields.");
-            }
             if (ModelState.IsValid)
             {
                 customer = _customerRepository.CreateCustomer(customer);
+                return RedirectToAction("CheckoutConfirmation", "CafeOrders", new { @customerId = customer.CustId });
             }
-            return RedirectToAction("CheckoutConfirmation", "CafeOrders", new { @customerId = customer.CustId });
+            else
+            {
+                return View();
+            }
+
+
         }
 
         // GET: CafeCustomers

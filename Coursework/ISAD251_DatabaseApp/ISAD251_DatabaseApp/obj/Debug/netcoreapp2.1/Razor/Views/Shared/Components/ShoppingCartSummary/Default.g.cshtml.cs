@@ -71,7 +71,7 @@ using ISAD251_DatabaseApp.Data.Models;
             WriteLiteral("    <li class=\"nav-item\">\r\n        ");
             EndContext();
             BeginContext(126, 246, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "af3ca7c15f834f86aafb1ea3e9a2d858", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5c5bd46183e443d4abbfc955cf587a75", async() => {
                 BeginContext(225, 90, true);
                 WriteLiteral("\r\n            <i class=\"fas fa-1x fa-shopping-basket text-primary mb-4\"></i>\r\n            ");
                 EndContext();
