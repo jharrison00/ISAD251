@@ -4,45 +4,55 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<header class="bg-img-2">
+    <h1 class="text-center text-uppercase text-white font-weight-bold">Product details</h1>
+</header>
 
-<div>
-    <h4>CafeProducts</h4>
-    <hr />
-    <dl class="dl-horizontal">
+<div class="container ex2 text-center">
+    <img src="@Html.DisplayFor(model => model.ProductImage)" />
+    <dl class="dl-horizontal text-center">
         <dt>
-            @Html.DisplayNameFor(model => model.ProductType)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ProductType)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductPrice)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ProductPrice)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.ProductName)
+            Name
         </dt>
         <dd>
             @Html.DisplayFor(model => model.ProductName)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.ProductCalories)
+            Price
+        </dt>
+        <dd>
+            £@Html.DisplayFor(model => model.ProductPrice)
+        </dd>
+        <dt>
+            Calories
         </dt>
         <dd>
             @Html.DisplayFor(model => model.ProductCalories)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.ProductDetails)
+            Description
         </dt>
         <dd>
             @Html.DisplayFor(model => model.ProductDetails)
         </dd>
     </dl>
+    <div class="ex3">
+        <div class="btn-group">
+            <a class="btn-group">
+                <a class="btn btn-default nav-link dropdown-toggle" data-toggle="dropdown">
+                    Back to menu<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu bg-secondary nav-item" role="menu">
+                    <li>
+                        <a class="nav-link" asp-controller="CafeProducts" asp-action="Menu" asp-route-category="Drinks">Drinks</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" asp-controller="CafeProducts" asp-action="Menu" asp-route-category="Food">Food</a>
+                    </li>
+                </ul>
+            </a>
+        </div>
+    </div>
+
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.ProductId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
