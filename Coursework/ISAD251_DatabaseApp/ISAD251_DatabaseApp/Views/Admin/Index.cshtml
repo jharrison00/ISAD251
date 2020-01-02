@@ -1,0 +1,43 @@
+﻿@model AdminViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="mb-4">Admin Homepage</h2>
+
+<div class="card-deck">
+    <div class="card col-lg-4">
+        <div class="card-header text-center">
+            <h3>Total Orders</h3>
+        </div>
+        <div class="card-body text-center">
+            <h4>@Model.Orders.Count()</h4>
+        </div>
+        <div class="card-footer text-center">
+            <h5><a asp-area="" asp-controller="Admin" asp-action="Order" class="logo">View Orders</a></h5>
+        </div>
+    </div>
+    <div class="card col-lg-4">
+        <div class="card-header text-center">
+            <h3>Total Customers</h3>
+        </div>
+        <div class="card-body text-center">
+            <h4>@Model.Customers.Count()</h4>
+        </div>
+        <div class="card-footer text-center">
+            <h5><a asp-area="" asp-controller="Admin" asp-action="Customer" class="logo">View Customers</a></h5>
+        </div>
+    </div>
+    <div class="card col-lg-4">
+        <div class="card-header text-center">
+            <h3>Total Products</h3>
+        </div>
+        <div class="card-body text-center">
+            <h4>@Model.Products.Count()</h4>
+        </div>
+        <div class="card-footer text-center">
+            <h5><a  asp-area="" asp-controller="Admin" asp-action="Product" class="logo">View Products</a></h5>
+        </div>
+    </div>
+</div>

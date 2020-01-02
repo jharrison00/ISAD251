@@ -65,7 +65,7 @@ using ISAD251_DatabaseApp.Data.Models;
             WriteLiteral("<li class=\"dropdown nav-item\">\r\n    ");
             EndContext();
             BeginContext(36, 170, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c3ec87a74ac843dba42427010481d83a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "84fa2a3350fb4413a0409d44109af77d", async() => {
                 BeginContext(155, 47, true);
                 WriteLiteral("Menu\r\n        <span class=\"caret\"></span>\r\n    ");
                 EndContext();
@@ -102,7 +102,7 @@ using ISAD251_DatabaseApp.Data.Models;
             WriteLiteral("            <li>\r\n                ");
             EndContext();
             BeginContext(349, 145, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "266696f9172c4a33a7759a9374448537", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "740fc89e4a6b478bad4562f265a1bf2e", async() => {
                 BeginContext(482, 8, false);
 #line 10 "C:\Users\Johnny\Documents\Homework\Uni\Isad 251\Coursework\ISAD251_DatabaseApp\ISAD251_DatabaseApp\Views\Shared\Components\CategoryMenu\Default.cshtml"
                                              Write(category);
@@ -154,7 +154,7 @@ using ISAD251_DatabaseApp.Data.Models;
             WriteLiteral("        <li>\r\n            ");
             EndContext();
             BeginContext(552, 106, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "88d947aa1d904a92a3f98e002aba60d1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e2d8f53a9398497ca258e0a3a243263e", async() => {
                 BeginContext(642, 12, true);
                 WriteLiteral("All Products");
                 EndContext();

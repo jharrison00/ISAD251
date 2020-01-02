@@ -47,6 +47,13 @@ namespace ISAD251_DatabaseApp.Controllers
             return View(products);
         }
 
+
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.CafeProducts.ToListAsync());
+        }
+
+
         // GET: CafeProducts/Details/5
         public async Task<IActionResult> Details(int? id)
         {
