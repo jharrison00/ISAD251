@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -15,6 +17,12 @@ using ISAD251_DatabaseApp.Data.Repositories;
 using ISAD251_DatabaseApp.Models.Interfaces;
 using ISAD251_DatabaseApp.Data.Models;
 using ISAD251_DatabaseApp.Data.Interfaces;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Session;
+using Microsoft.AspNetCore.CookiePolicy;
+using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.AspNetCore.Routing;
+
 
 namespace ISAD251_DatabaseApp
 {
@@ -46,6 +54,7 @@ namespace ISAD251_DatabaseApp
             services.AddScoped(sp => ShoppingCart.GetCart(sp));
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddMemoryCache();

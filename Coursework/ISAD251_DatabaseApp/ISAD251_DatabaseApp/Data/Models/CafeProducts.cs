@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace ISAD251_DatabaseApp.Models
@@ -16,9 +17,10 @@ namespace ISAD251_DatabaseApp.Models
         public string ProductName { get; set; }
         public int? ProductCalories { get; set; }
         public string ProductDetails { get; set; }
+        [JsonIgnore]
         public string ProductImage { get; set; }
 
-
+        [JsonIgnore]
         public ICollection<CafeOrderDetails> CafeOrderDetails { get; set; }
     }
 }
