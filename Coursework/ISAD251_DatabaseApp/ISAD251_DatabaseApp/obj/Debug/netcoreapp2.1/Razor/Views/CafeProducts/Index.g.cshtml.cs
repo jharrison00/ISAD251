@@ -73,7 +73,7 @@ using ISAD251_DatabaseApp.Data.Models;
             WriteLiteral("\r\n    <h2>Index</h2>\r\n\r\n    <p>\r\n        ");
             EndContext();
             BeginContext(205, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f8c3db563cd74f239cb1dac21c4217ae", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bd4069bc49ce4e3981b7fcee236b5cb6", async() => {
                 BeginContext(228, 10, true);
                 WriteLiteral("Create New");
                 EndContext();
@@ -223,7 +223,7 @@ using ISAD251_DatabaseApp.Data.Models;
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(1893, 60, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6b5a7b7f81e5490788a085f4da0c8f81", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "170c8272adba449da92d3c78db0f8b8b", async() => {
                 BeginContext(1945, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -258,7 +258,7 @@ using ISAD251_DatabaseApp.Data.Models;
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(1977, 66, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b0a476f8ccba4137bfe5636eb3ba3622", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1bfdd00db1054d8fb2a4fde8384d091d", async() => {
                 BeginContext(2032, 7, true);
                 WriteLiteral("Details");
                 EndContext();
@@ -293,7 +293,7 @@ using ISAD251_DatabaseApp.Data.Models;
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(2067, 64, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "70426c3adfca4c8dad905adde015fedd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "421bb513177e4d57a3232a3daa746011", async() => {
                 BeginContext(2121, 6, true);
                 WriteLiteral("Delete");
                 EndContext();

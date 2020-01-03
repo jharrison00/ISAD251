@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
 
 namespace ISAD251_DatabaseApp.Models
 {
@@ -18,7 +18,6 @@ namespace ISAD251_DatabaseApp.Models
         [StringLength(20)]
         [Required(ErrorMessage = "Please enter your first name")]
         public string CustFirstName { get; set; }
-        [JsonIgnore]
         [StringLength(20)]
         [Required(ErrorMessage = "Please enter your last name")]
         public string CustSurName { get; set; }

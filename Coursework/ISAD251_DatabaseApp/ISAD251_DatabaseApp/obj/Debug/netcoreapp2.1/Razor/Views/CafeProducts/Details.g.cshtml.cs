@@ -133,7 +133,7 @@ WriteAttributeValue("", 283, Html.DisplayFor(model => model.ProductImage), 283, 
                         ");
             EndContext();
             BeginContext(1341, 106, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2b9734da581346a294368d9f77458aa4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9b169bd4f6c34d84b5ce98a96d97a05a", async() => {
                 BeginContext(1437, 6, true);
                 WriteLiteral("Drinks");
                 EndContext();
@@ -164,7 +164,7 @@ WriteAttributeValue("", 283, Html.DisplayFor(model => model.ProductImage), 283, 
             WriteLiteral("\r\n                    </li>\r\n                    <li>\r\n                        ");
             EndContext();
             BeginContext(1526, 102, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b3229c56cb4e4a9cb76a87045fa10bc1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b7bbf1a9af9940aca3f6f1e8e04d9130", async() => {
                 BeginContext(1620, 4, true);
                 WriteLiteral("Food");
                 EndContext();
