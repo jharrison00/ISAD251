@@ -90,7 +90,7 @@ using ISAD251_DatabaseApp.Data.Models;
             WriteLiteral("</h4>\r\n        </div>\r\n        <div class=\"card-footer text-center\">\r\n            <h5>");
             EndContext();
             BeginContext(482, 85, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2a89915cc31f486ab9eb021ac30c7bd6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d02022cc3b9e4fb7b6b3e4cb9bd27211", async() => {
                 BeginContext(552, 11, true);
                 WriteLiteral("View Orders");
                 EndContext();
@@ -127,7 +127,7 @@ using ISAD251_DatabaseApp.Data.Models;
             WriteLiteral("</h4>\r\n        </div>\r\n        <div class=\"card-footer text-center\">\r\n            <h5>");
             EndContext();
             BeginContext(907, 91, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c2aa6bcf499d4c7fa7494e7974ed0615", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5bd8b22a0fc84404bc9ce0d897d06344", async() => {
                 BeginContext(980, 14, true);
                 WriteLiteral("View Customers");
                 EndContext();
@@ -164,7 +164,7 @@ using ISAD251_DatabaseApp.Data.Models;
             WriteLiteral("</h4>\r\n        </div>\r\n        <div class=\"card-footer text-center\">\r\n            <h5>");
             EndContext();
             BeginContext(1336, 90, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "da9dec044894453681e612292c9a63da", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "99421ca7b4cb497cb45b57974bae44cc", async() => {
                 BeginContext(1409, 13, true);
                 WriteLiteral("View Products");
                 EndContext();

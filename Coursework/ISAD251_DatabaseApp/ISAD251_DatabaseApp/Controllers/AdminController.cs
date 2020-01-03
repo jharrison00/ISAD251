@@ -17,11 +17,9 @@ namespace ISAD251_DatabaseApp.Controllers
     public class AdminController : Controller
     {
         private readonly ISAD251_JHarrisonContext _context;
-        private readonly ICustomerRepository _customerRepository;
 
-        public AdminController(ISAD251_JHarrisonContext context, ICustomerRepository customerRepository)
+        public AdminController(ISAD251_JHarrisonContext context)
         {
-            _customerRepository = customerRepository;
             _context = context;
         }
 
@@ -36,6 +34,7 @@ namespace ISAD251_DatabaseApp.Controllers
 
             return View(adminViewModel);
         }
+
         // GET: CafeOrders
         public async Task<IActionResult> Order()
         {
@@ -61,7 +60,7 @@ namespace ISAD251_DatabaseApp.Controllers
             return View();
         }
 
-        // GET: CafeCustomers/Edit/5
+        // GET: Admin/EditCustomer/5
         public async Task<IActionResult> EditCustomer(int? id)
         {
             if (id == null)
@@ -92,8 +91,158 @@ namespace ISAD251_DatabaseApp.Controllers
             return View(customer);
         }
 
+        // GET: Admin/CreateProduct
+        public ActionResult CreateProduct()
+        {
+            return View();
+        }
+
+        // GET: Admin/EditProduct/5
+        public async Task<IActionResult> EditProduct(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var product = await _context.CafeProducts.FindAsync(id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return View(product);
+        }
+
+        // GET: Admin/DeleteProduct/5
+        public async Task<IActionResult> DeleteProduct(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var product = await _context.CafeProducts
+                .FirstOrDefaultAsync(m => m.ProductId == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+            return View(product);
+        }
+
+        // POST: Admin/CreateCustomer
+        [HttpPost]
+        public IActionResult CreateCustomer(CafeCustomers customer)
+        {
+            if (ModelState.IsValid)
+            {
+                AlertCreateCustomer(customer);
+            }
+            return View();
+        }
+
+        // POST: Admin/EditCustomer/5
+        [HttpPost]
+        public IActionResult EditCustomer(int id, [Bind("CustId,CustFirstName,CustSurName")] CafeCustomers customer)
+        {
+            if (id != customer.CustId)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                AlertEditCustomer(id,customer);
+            }
+            return View(customer);
+        }
+
+        // POST: Admin/DeleteCustomer/5
+        [HttpPost]
+        public IActionResult DeleteCustomer(int id)
+        {
+            if (ModelState.IsValid)
+            {
+                AlertDeleteCustomer(id);
+            }          
+            return View();
+        }
+
+        // POST: Admin/CreateProduct
+        [HttpPost]
+        public async Task<IActionResult> CreateProduct(CafeProducts product)
+        {
+            if (ModelState.IsValid)
+            {
+                CafeProducts lastProduct = _context.CafeProducts.LastOrDefault(c => c.ProductId == c.ProductId);
+
+                if (lastProduct != null)
+                {
+                    product.ProductId = lastProduct.ProductId + 1;
+                }
+                else
+                {
+                    product.ProductId = 1;
+                }
+                _context.Add(product);
+                await _context.SaveChangesAsync();
+                ViewBag.Success = true;
+                return View();
+            }
+            return View();
+        }
+
+        // POST: Admin/EditProduct/5
+        [HttpPost]
+        public async Task<IActionResult> EditProduct(int id, [Bind("ProductId,ProductType,ProductPrice,ProductName,ProductCalories,ProductDetails,ProductImage")] CafeProducts cafeProducts)
+        {
+            if (id != cafeProducts.ProductId)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(cafeProducts);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!CafeProductsExists(cafeProducts.ProductId))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                ViewBag.Success = true;
+                return View();
+            }
+            return View(cafeProducts);
+        }
+
+        // POST: Admin/DeleteProduct/5
+        [HttpPost]
+        public async Task<IActionResult> DeleteProduct(int id)
+        {
+            var cafeProducts = await _context.CafeProducts.FindAsync(id);
+            try
+            {
+                _context.CafeProducts.Remove(cafeProducts);
+                await _context.SaveChangesAsync();
+                ViewBag.success = true;
+            }
+            catch (DbUpdateException)
+            {
+                ViewBag.success = false;
+            }
+            return View();
+        }
+
         // POST: api/customer/
-        private void AlertCreate(CafeCustomers customer)
+        private void AlertCreateCustomer(CafeCustomers customer)
         {
             string URI = "https://localhost:44371/api/customer";
 
@@ -112,7 +261,7 @@ namespace ISAD251_DatabaseApp.Controllers
         }
 
         // PUT: api/Customer/5
-        private void AlertEdit(int? id,CafeCustomers customer)
+        private void AlertEditCustomer(int? id, CafeCustomers customer)
         {
             string URI = "https://localhost:44371/api/customer/" + id.ToString();
 
@@ -121,18 +270,18 @@ namespace ISAD251_DatabaseApp.Controllers
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new
                     System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-                HttpContent content = new StringContent("{\"custID\":\"" +customer.CustId.ToString()+
+                HttpContent content = new StringContent("{\"custID\":\"" + customer.CustId.ToString() +
                     "\",\"custFirstName\":\"" + customer.CustFirstName.ToString() +
                     "\",\"custSurName\":\"" + customer.CustSurName.ToString() + "\"}", Encoding.UTF8, "application/json");
 
-                HttpResponseMessage response = client.PutAsync(URI,content).Result;
+                HttpResponseMessage response = client.PutAsync(URI, content).Result;
                 if (response.IsSuccessStatusCode == true)
                     ViewBag.Success = true;
             }
         }
 
         // DELETE: api/customer/5
-        private void AlertDelete(int id)
+        private void AlertDeleteCustomer(int id)
         {
             string URI = "https://localhost:44371/api/customer/" + id.ToString();
 
@@ -150,43 +299,9 @@ namespace ISAD251_DatabaseApp.Controllers
             }
         }
 
-        // POST: Admin/CreateCustomer
-        [HttpPost]
-        public IActionResult CreateCustomer(CafeCustomers customer)
+        private bool CafeProductsExists(int id)
         {
-            if (ModelState.IsValid)
-            {
-                AlertCreate(customer);
-            }
-            return View();
+            return _context.CafeProducts.Any(e => e.ProductId == id);
         }
-
-        // POST: Admin/EditCustomer/5
-        [HttpPost]
-        public IActionResult EditCustomer(int id, [Bind("CustId,CustFirstName,CustSurName")] CafeCustomers customer)
-        {
-            if (id != customer.CustId)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                AlertEdit(id,customer);
-            }
-            return View(customer);
-        }
-
-        // POST: Admin/DeleteCustomer/5
-        [HttpPost]
-        public IActionResult DeleteCustomer(int id)
-        {
-            if (ModelState.IsValid)
-            {
-                AlertDelete(id);
-            }          
-            return View();
-        }
-
     }
 }

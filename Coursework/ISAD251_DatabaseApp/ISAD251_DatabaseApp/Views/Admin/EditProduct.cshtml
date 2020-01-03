@@ -2,43 +2,48 @@
 
 @{
     ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Edit</h2>
+<h2>Edit Product</h2>
 
-<h4>CafeProducts</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="EditProduct">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ProductId" />
             <div class="form-group border-1">
-                <label class="control-label">Product Type</label>
+                <label class="control-label">Type</label>
                 <select asp-for="ProductType">
                     <option value="Drinks">Drinks</option>
                     <option value="Food">Food</option>
                 </select>
             </div>
-            <div class="form-group  border-1">
-                <label asp-for="ProductPrice" class="control-label"></label>
+            <div class="form-group border-1">
+                <label class="control-label">Price</label>
                 <input asp-for="ProductPrice" class="form-control" />
                 <span asp-validation-for="ProductPrice" class="text-danger"></span>
             </div>
-            <div class="form-group  border-1">
-                <label asp-for="ProductName" class="control-label"></label>
+            <div class="form-group border-1">
+                <label class="control-label">Name</label>
                 <input asp-for="ProductName" class="form-control" />
                 <span asp-validation-for="ProductName" class="text-danger"></span>
             </div>
-            <div class="form-group  border-1">
-                <label asp-for="ProductCalories" class="control-label"></label>
+            <div class="form-group border-1">
+                <label class="control-label">Calories</label>
                 <input asp-for="ProductCalories" class="form-control" />
                 <span asp-validation-for="ProductCalories" class="text-danger"></span>
             </div>
-            <div class="form-group  border-1">
-                <label asp-for="ProductDetails" class="control-label"></label>
+            <div class="form-group border-1">
+                <label class="control-label">Details</label>
                 <input asp-for="ProductDetails" class="form-control" />
                 <span asp-validation-for="ProductDetails" class="text-danger"></span>
+            </div>
+            <div class="form-group border-1">
+                <label class="control-label">Image</label>
+                <input asp-for="ProductImage" class="form-control" />
+                <span asp-validation-for="ProductImage" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
@@ -48,9 +53,19 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="margin" asp-area="" asp-controller="Admin" asp-action="Product">Back to List</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+@{
+    if (ViewBag.success != null)
+    {
+    <div class="row margin">
+        <div class="col-sm-2">
+            <div class="card bg-success mb-3">
+                <div class="card-header bg-success text-center text-white">Product successfully edited</div>
+            </div>
+        </div>
+    </div>
+    }
 }
+
