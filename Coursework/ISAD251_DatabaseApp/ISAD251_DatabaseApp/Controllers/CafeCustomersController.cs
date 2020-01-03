@@ -42,8 +42,6 @@ namespace ISAD251_DatabaseApp.Controllers
             {
                 return View();
             }
-
-
         }
 
         // GET: CafeCustomers

@@ -1,0 +1,49 @@
+﻿@model ISAD251_DatabaseApp.Models.CafeCustomers
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Edit Customer</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditCustomer">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CustId" />
+            <div class="form-group">
+                <label class="control-label">First Name</label>
+                <input asp-for="CustFirstName" class="form-control" />
+                <span asp-validation-for="CustFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Last Name</label>
+                <input asp-for="CustSurName" class="form-control" />
+                <span asp-validation-for="CustSurName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@{
+    if (ViewBag.success != null)
+    {
+        <div class="row margin">
+            <div class="col-sm-2">
+                <div class="card bg-success mb-3">
+                    <div class="card-header bg-success text-center text-white">Customer successfully edited</div>
+                </div>
+            </div>
+        </div>
+    }
+}
+

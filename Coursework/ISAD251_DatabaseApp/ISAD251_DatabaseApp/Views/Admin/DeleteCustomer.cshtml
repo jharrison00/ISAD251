@@ -1,0 +1,55 @@
+﻿@model ISAD251_DatabaseApp.Models.CafeCustomers
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Delete Customer</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            First Name
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CustFirstName)
+        </dd>
+        <dt>
+            Last Name
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CustSurName)
+        </dd>
+    </dl>
+
+    <form asp-area="" asp-cotnroler="Admin" asp-action="DeleteCustomer">
+        <input type="hidden" asp-for="CustId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-area="" asp-controller="Admin" asp-action="Customer">Back to List</a>
+    </form>
+</div>
+
+@{
+    if (ViewBag.success == true)
+    {
+        <div class="row margin">
+            <div class="col-sm-2">
+                <div class="card bg-success mb-3">
+                    <div class="card-header bg-success text-center text-white">Customer successfully deleted</div>
+                </div>
+            </div>
+        </div>
+    }
+    else if ( ViewBag.success == false)
+    {
+        <div class="row margin">
+            <div class="col-sm-2">
+                <div class="card bg-success mb-3">
+                    <div class="card-header bg-danger text-center text-white">Customer can't be deleted as they have orders</div>
+                </div>
+            </div>
+        </div>
+    }
+}
