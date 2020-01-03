@@ -161,7 +161,8 @@ namespace ISAD251_DatabaseApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                AlertDeleteCustomer(id);
+                string UriRoute = "customer";
+                AlertDelete(id,UriRoute);
             }          
             return View();
         }
@@ -225,18 +226,12 @@ namespace ISAD251_DatabaseApp.Controllers
 
         // POST: Admin/DeleteProduct/5
         [HttpPost]
-        public async Task<IActionResult> DeleteProduct(int id)
+        public IActionResult DeleteProduct(int id)
         {
-            var cafeProducts = await _context.CafeProducts.FindAsync(id);
-            try
+            if (ModelState.IsValid)
             {
-                _context.CafeProducts.Remove(cafeProducts);
-                await _context.SaveChangesAsync();
-                ViewBag.success = true;
-            }
-            catch (DbUpdateException)
-            {
-                ViewBag.success = false;
+                string UriRoute = "customer";
+                AlertDelete(id, UriRoute);
             }
             return View();
         }
@@ -281,9 +276,9 @@ namespace ISAD251_DatabaseApp.Controllers
         }
 
         // DELETE: api/customer/5
-        private void AlertDeleteCustomer(int id)
+        private void AlertDelete(int id,string route)
         {
-            string URI = "https://localhost:44371/api/customer/" + id.ToString();
+            string URI = "https://localhost:44371/api/"+ route +"/"+ id.ToString();
 
             using (HttpClient client = new HttpClient())
             {

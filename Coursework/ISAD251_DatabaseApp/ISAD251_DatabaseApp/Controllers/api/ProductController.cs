@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ISAD251_DatabaseApp.Models;
 
-namespace ISAD251_DatabaseApp.api
+namespace ISAD251_DatabaseApp.Controllers.api
 {
     [Route("api/[controller]")]
     [ApiController]
