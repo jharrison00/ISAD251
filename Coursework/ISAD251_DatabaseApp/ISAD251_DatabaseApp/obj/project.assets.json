@@ -5,8 +5,8 @@
       "EntityFramework/6.4.0": {
         "type": "package",
         "build": {
-          "buildTransitive/EntityFramework.props": {},
-          "buildTransitive/EntityFramework.targets": {}
+          "build/EntityFramework.props": {},
+          "build/EntityFramework.targets": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -12674,24 +12674,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Johnny\\.nuget\\packages\\": {},
+    "C:\\Users\\jharrison12\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Johnny\\Documents\\Homework\\Uni\\Isad 251\\Coursework\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp.csproj",
+      "projectUniqueName": "C:\\Users\\jharrison12\\ISAD251\\Coursework\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp.csproj",
       "projectName": "ISAD251_DatabaseApp",
-      "projectPath": "C:\\Users\\Johnny\\Documents\\Homework\\Uni\\Isad 251\\Coursework\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp.csproj",
-      "packagesPath": "C:\\Users\\Johnny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Johnny\\Documents\\Homework\\Uni\\Isad 251\\Coursework\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp\\obj\\",
+      "projectPath": "C:\\Users\\jharrison12\\ISAD251\\Coursework\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp.csproj",
+      "packagesPath": "C:\\Users\\jharrison12\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jharrison12\\ISAD251\\Coursework\\ISAD251_DatabaseApp\\ISAD251_DatabaseApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Johnny\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\jharrison12\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -12760,7 +12763,6 @@
             "version": "[2.1.1, )"
           },
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
@@ -12775,16 +12777,10 @@
           }
         },
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }

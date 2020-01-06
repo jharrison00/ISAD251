@@ -230,7 +230,7 @@ namespace ISAD251_DatabaseApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                string UriRoute = "customer";
+                string UriRoute = "product";
                 AlertDelete(id, UriRoute);
             }
             return View();
@@ -239,7 +239,7 @@ namespace ISAD251_DatabaseApp.Controllers
         // POST: api/customer/
         private void AlertCreateCustomer(CafeCustomers customer)
         {
-            string URI = "https://localhost:44371/api/customer";
+            string URI = "http://web.socem.plymouth.ac.uk/ISAD251/jharrison12/api/customer";
 
             using (HttpClient client = new HttpClient())
             {
@@ -258,7 +258,7 @@ namespace ISAD251_DatabaseApp.Controllers
         // PUT: api/Customer/5
         private void AlertEditCustomer(int? id, CafeCustomers customer)
         {
-            string URI = "https://localhost:44371/api/customer/" + id.ToString();
+            string URI = "http://web.socem.plymouth.ac.uk/ISAD251/jharrison12/api/customer/" + id.ToString();
 
             using (HttpClient client = new HttpClient())
             {
@@ -278,13 +278,13 @@ namespace ISAD251_DatabaseApp.Controllers
         // DELETE: api/customer/5
         private void AlertDelete(int id,string route)
         {
-            string URI = "https://localhost:44371/api/"+ route +"/"+ id.ToString();
+            string URI = "http://web.socem.plymouth.ac.uk/ISAD251/jharrison12/api/" + route +"/"+ id.ToString();
 
             using (HttpClient client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new
-                    System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
                 HttpResponseMessage response = client.DeleteAsync(URI).Result;
                 if (response.IsSuccessStatusCode == true)
