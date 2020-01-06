@@ -60,3 +60,9 @@ C:\Users\Johnny\Documents\Homework\Uni\Isad 251\Coursework\ISAD251_DatabaseApp\I
 C:\Users\Johnny\Documents\Homework\Uni\Isad 251\Coursework\ISAD251_DatabaseApp\ISAD251_DatabaseApp\obj\Release\netcoreapp2.1\ISAD251_DatabaseApp.dll
 C:\Users\Johnny\Documents\Homework\Uni\Isad 251\Coursework\ISAD251_DatabaseApp\ISAD251_DatabaseApp\obj\Release\netcoreapp2.1\ISAD251_DatabaseApp.pdb
 C:\Users\Johnny\Documents\Homework\Uni\Isad 251\Coursework\ISAD251_DatabaseApp\ISAD251_DatabaseApp\obj\Release\netcoreapp2.1\ISAD251_DatabaseApp.csproj.CopyComplete
+C:\Users\Johnny\Documents\Homework\Uni\Isad 251\Coursework\ISAD251_DatabaseApp\ISAD251_DatabaseApp\obj\Release\netcoreapp2.1\Razor\Views\Admin\CreateCustomer.g.cshtml.cs
+C:\Users\Johnny\Documents\Homework\Uni\Isad 251\Coursework\ISAD251_DatabaseApp\ISAD251_DatabaseApp\obj\Release\netcoreapp2.1\Razor\Views\Admin\CreateProduct.g.cshtml.cs
+C:\Users\Johnny\Documents\Homework\Uni\Isad 251\Coursework\ISAD251_DatabaseApp\ISAD251_DatabaseApp\obj\Release\netcoreapp2.1\Razor\Views\Admin\DeleteCustomer.g.cshtml.cs
+C:\Users\Johnny\Documents\Homework\Uni\Isad 251\Coursework\ISAD251_DatabaseApp\ISAD251_DatabaseApp\obj\Release\netcoreapp2.1\Razor\Views\Admin\DeleteProduct.g.cshtml.cs
+C:\Users\Johnny\Documents\Homework\Uni\Isad 251\Coursework\ISAD251_DatabaseApp\ISAD251_DatabaseApp\obj\Release\netcoreapp2.1\Razor\Views\Admin\EditCustomer.g.cshtml.cs
+C:\Users\Johnny\Documents\Homework\Uni\Isad 251\Coursework\ISAD251_DatabaseApp\ISAD251_DatabaseApp\obj\Release\netcoreapp2.1\Razor\Views\Admin\EditProduct.g.cshtml.cs
