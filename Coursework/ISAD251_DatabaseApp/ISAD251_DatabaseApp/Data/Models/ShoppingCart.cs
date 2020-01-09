@@ -25,11 +25,11 @@ namespace ISAD251_DatabaseApp.Data.Models
         //Get Cart
         public static ShoppingCart GetCart(IServiceProvider services)
         {
+
             ISession session = services.GetRequiredService<IHttpContextAccessor>()?
                 .HttpContext.Session;
             var context = services.GetService<ISAD251_JHarrisonContext>();
             string cartID = session.GetString("CartID") ?? Guid.NewGuid().ToString();
-
             session.SetString("CartID", cartID);
 
             return new ShoppingCart(context) { ShoppingCartID = cartID };
@@ -90,7 +90,6 @@ namespace ISAD251_DatabaseApp.Data.Models
                     _DbContext.ShoppingCartItems.Remove(shoppingCartItem);
                 }
             }
-
             _DbContext.SaveChanges();
 
             return localAmount;

@@ -46,6 +46,9 @@
                     </li>
                     @await Component.InvokeAsync("CategoryMenu")
                     @await Component.InvokeAsync("ShoppingCartSummary")
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" asp-area="" asp-controller="Admin" asp-action="Index">Admin</a>
+                    </li>
                 </ul>
             </div>
         </div>

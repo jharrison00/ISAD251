@@ -47,18 +47,15 @@ namespace ISAD251_DatabaseApp
 
             services.AddDbContext<ISAD251_JHarrisonContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("ISAD251_DB")));
-
             services.AddTransient<IProductRepository, ProductRepository>();
-
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSession();
             services.AddScoped(sp => ShoppingCart.GetCart(sp));
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
-
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddMemoryCache();
-            services.AddSession();
+
 
         }
 
@@ -75,11 +72,8 @@ namespace ISAD251_DatabaseApp
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseSession();
-            app.UseCookiePolicy();
-
+            app.UseSession();      
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

@@ -13,13 +13,11 @@ namespace ISAD251_DatabaseApp.Controllers
     {
         private readonly IProductRepository _productRepository;
         private readonly ShoppingCart _shoppingCart;
-        private readonly ISAD251_JHarrisonContext _context;
 
-        public ShoppingCartController(IProductRepository productRepository, ShoppingCart shoppingCart, ISAD251_JHarrisonContext context)
+        public ShoppingCartController(IProductRepository productRepository, ShoppingCart shoppingCart)
         {
             _shoppingCart = shoppingCart;
             _productRepository = productRepository;
-            _context = context;
         }
 
         //Returns data to view model
@@ -44,7 +42,6 @@ namespace ISAD251_DatabaseApp.Controllers
             if (selectedProduct != null)
             {
                 _shoppingCart.AddToCart(selectedProduct, 1);
-                _shoppingCart.GetShoppingCartItems();
             }        
             return RedirectToAction("Menu", "CafeProducts");
         }
