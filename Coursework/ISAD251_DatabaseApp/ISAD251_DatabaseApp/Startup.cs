@@ -55,8 +55,6 @@ namespace ISAD251_DatabaseApp
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddMemoryCache();
-
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -72,6 +70,7 @@ namespace ISAD251_DatabaseApp
                 app.UseHsts();
             }
 
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSession();      
             app.UseMvc(routes =>
